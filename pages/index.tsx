@@ -1,17 +1,12 @@
-import { count } from "console";
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { MyFirstComponent } from "../Components/MyFirstComponent";
-import styles from "../styles/Home.module.css";
 
-const Home: NextPage = ({ onClick }) => {
-  let counter = 1;
-  onClick = counter--;
+const Home: NextPage = () => {
   return (
     <>
-      <MyFirstComponent dganit />
-      <span>{counter}</span>
+      <MyFirstComponent className budget={100} budgetName="food" />
+      <MyFirstComponent className budget={200} budgetName="therapy" />
+      <MyFirstComponent className budget={100} budgetName="cleanning" />
     </>
   );
 };
