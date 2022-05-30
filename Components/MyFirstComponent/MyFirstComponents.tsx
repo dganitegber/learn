@@ -1,9 +1,15 @@
 import { Button } from "@mui/material";
-
-export const MyFirstComponent = () => {
+const dganit: string = "this is me";
+export const MyFirstComponent = ({ dganit: any }) => {
+  //   console.log("dganit", dganit);
+  const dothis = () => {
+    console.log("click");
+  };
   return (
     <>
-      <Button color="secondary">hello from component</Button>
+      <Button onClick={dothis} color="secondary">
+        hello from component
+      </Button>
     </>
   );
 };
