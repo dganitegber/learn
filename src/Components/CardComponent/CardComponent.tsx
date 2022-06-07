@@ -73,7 +73,7 @@ export const CardComponent = (props: any) => {
   const [newSumBudget, setNewSumBudget] = useState(props.monthlyBudget);
   const ichanged = (event: any) => {
     if (event.key === "Enter") {
-      if (newSumBudget === props.monthlyBudget) {
+      if (!isNaN(event.target.value)) {
         console.log(props, event.target.value);
         setNewSumBudget(props.monthlyBudget - event.target.value);
       } else {
